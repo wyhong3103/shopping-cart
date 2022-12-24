@@ -7,7 +7,7 @@ import Product from './components/Product';
 import Shop from './components/Shop';
 
 
-const RouteSwitch = () => {
+const App = () => {
     const [cart, setCart] = useState([]);
 
     const productDetails = [
@@ -177,4 +177,4 @@ const RouteSwitch = () => {
     )
 };
 
-export default RouteSwitch;
+export default App;
