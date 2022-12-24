@@ -103,14 +103,75 @@ const RouteSwitch = () => {
         },
     ];
 
+    const addToCart = (item) => {
+        setCart(prev => [...prev, item]);
+    }
+
+    const incItemCart = (id) => {
+        setCart(prev => {
+            const newCart = [];
+            for(const i of prev){
+                const temp = {...i};
+                if (temp.id === id){
+                    temp.qty++
+                }
+                newCart.push(temp);
+            }
+
+            return newCart;
+        })
+    }
+
+    const decItemCart = (id) => {
+        setCart(prev => {
+            const newCart = [];
+            for(const i of prev){
+                const temp = {...i};
+                if (temp.id === id){
+                    temp.qty--;
+                }
+                if (temp.qty > 0) newCart.push(temp);
+            }
+
+            return newCart;
+        })
+    }
+
     return(
         <BrowserRouter>
             <Nav/>
             <Routes>
-                <Route path="/" element={<Home/>}></Route>
-                <Route path="/cart" element={<Cart cart={cart} products={productDetails}/>}></Route>
-                <Route path="/shop" element={<Shop/>}></Route>
-                <Route path="/product/:id" element={<Product cart={cart} products={productDetails}/>}></Route>
+                <Route 
+                    path="/" 
+                    element={<Home/>}
+                ></Route>
+                <Route 
+                    path="/cart" 
+                    element={
+                        <Cart 
+                            cart={cart} 
+                            products={productDetails}
+                            inc={incItemCart}
+                            dec={decItemCart} 
+                        />
+                    }
+                ></Route>
+                <Route 
+                    path="/shop" 
+                    element={<Shop product={productDetails}/>}
+                ></Route>
+                <Route 
+                    path="/product/:id" 
+                    element={
+                        <Product 
+                            cart={cart} 
+                            products={productDetails}
+                            add={addToCart} 
+                            inc={incItemCart} 
+                            dec={decItemCart} 
+                        />
+                    }
+                ></Route>
             </Routes>
         </BrowserRouter>
     )
