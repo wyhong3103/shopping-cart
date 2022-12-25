@@ -1,4 +1,4 @@
-const Product = (prop) => {
+const Product = ({cart, products, inc, dec}) => {
 
 }
 
