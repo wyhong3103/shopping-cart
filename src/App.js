@@ -167,9 +167,6 @@ const App = () => {
                     element={
                         <Cart 
                             cart={cart} 
-                            products={productDetails}
-                            inc={incItemCart}
-                            dec={decItemCart} 
                         />
                     }
                 ></Route>
