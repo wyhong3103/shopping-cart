@@ -6,7 +6,7 @@ const ItemCard = ({item}) => {
         <div className="item-card">
             <img src={image} alt={`item-${item.id}`}/>
             <h3 className="game-title">{item.name}</h3>
-            <p className="game-price">{item.price}</p>
+            <p className="game-price">${item.price}</p>
         </div>
     )
 }
