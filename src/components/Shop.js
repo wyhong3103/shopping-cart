@@ -1,4 +1,5 @@
-import {ItemCard} from './ItemCard';
+import ItemCard from './ItemCard';
+import { Link } from 'react-router-dom';
 
 const Shop = ({products}) => {
     return(
@@ -6,7 +7,9 @@ const Shop = ({products}) => {
             {
                 products.map((item) => {
                     return(
-                        <ItemCard key={item.id} item={item}/>
+                        <Link to={`/product/${item.id}`}>
+                            <ItemCard key={item.id} item={item}/>
+                        </Link>
                     )
                 })
             }
