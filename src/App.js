@@ -8,6 +8,16 @@ import Shop from './components/Shop';
 
 
 const App = () => {
+    
+    /*
+        item in cart should have 
+        {
+            id,
+            name,
+            price,
+            qty,
+        }
+    */
     const [cart, setCart] = useState([]);
 
     const productDetails = [
@@ -103,20 +113,27 @@ const App = () => {
         },
     ];
 
-    const addToCart = (item) => {
-        setCart(prev => [...prev, item]);
-    }
-
     const incItemCart = (id) => {
         setCart(prev => {
             const newCart = [];
+            
+            let found = false;
+
             for(const i of prev){
                 const temp = {...i};
                 if (temp.id === id){
+                    found = true;
                     temp.qty++
                 }
                 newCart.push(temp);
             }
+
+            if (!found) newCart.push({
+                id : id,
+                name : productDetails[id].name,
+                price : productDetails[id].price,
+                qty : 1,
+            })
 
             return newCart;
         })
@@ -158,7 +175,7 @@ const App = () => {
                 ></Route>
                 <Route 
                     path="/shop" 
-                    element={<Shop product={productDetails}/>}
+                    element={<Shop products={productDetails}/>}
                 ></Route>
                 <Route 
                     path="/product/:id" 
@@ -166,7 +183,6 @@ const App = () => {
                         <Product 
                             cart={cart} 
                             products={productDetails}
-                            add={addToCart} 
                             inc={incItemCart} 
                             dec={decItemCart} 
                         />
