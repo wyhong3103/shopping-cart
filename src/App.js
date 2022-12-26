@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import Product from './components/Product';
 import Shop from './components/Shop';
+import NotFound from './components/NotFound';
 import './styles/General.css';
 
 
@@ -162,7 +163,7 @@ const App = () => {
                 <Route 
                     path="/" 
                     element={<Home/>}
-                ></Route>
+                />
                 <Route 
                     path="/cart" 
                     element={
@@ -170,11 +171,11 @@ const App = () => {
                             cart={cart} 
                         />
                     }
-                ></Route>
+                />
                 <Route 
                     path="/shop" 
                     element={<Shop products={productDetails}/>}
-                ></Route>
+                />
                 <Route 
                     path="/product/:id" 
                     element={
@@ -185,7 +186,11 @@ const App = () => {
                             dec={decItemCart} 
                         />
                     }
-                ></Route>
+                />
+            <Route 
+                path="*" 
+                element={<NotFound/>}
+            />
             </Routes>
         </BrowserRouter>
     )
