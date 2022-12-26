@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
+import '../styles/Product.css';
 
 const Product = ({cart, products, inc, dec}) => {
     const {id} = useParams();
@@ -18,7 +19,7 @@ const Product = ({cart, products, inc, dec}) => {
     );
 
     for (const i of cart){
-        if (notFound && i.id === id){
+        if (!notFound && i.id === id){
             item.qty = i.qty;
         }
     }
@@ -38,16 +39,19 @@ const Product = ({cart, products, inc, dec}) => {
                 <NotFound/> 
                 :
                 <div className="product-cont">
-                    <div className="left">
-                        <img src={image} alt={`item-${id}`}/>
-                    </div>
-                    <div className="right">
-                        <h2>{item.name}</h2>
-                        <h3>Rating - {item.rating} / 5</h3>
-                        <h3>Price - {item.price}</h3>
-                        <label for="qty-inp">
-                            <input type="number" id="qty-inp" value={item.qty} onChange={(e) => handleChange(e)}/>
-                        </label>
+                    <div className="product-flex">
+                        <div className="left">
+                            <img src={image} alt={`item-${id}`}/>
+                        </div>
+                        <div className="right">
+                            <h2>{item.name}</h2>
+                            <h3>Rating - {item.rating} / 5</h3>
+                            <h3>Price - {item.price}</h3>
+                            <label htmlFor="qty-inp">
+                                Qty
+                                <input type="number" id="qty-inp" value={item.qty} onChange={(e) => handleChange(e)}/>
+                            </label>
+                        </div>
                     </div>
 
                 </div>
