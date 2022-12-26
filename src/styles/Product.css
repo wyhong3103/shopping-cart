@@ -43,6 +43,7 @@
 
 .product-cont input{
     font-size: 2rem;
+    width : 30rem;
     background-color: var(--color3);
     font-family: var(--font1);
     padding : 1rem;
