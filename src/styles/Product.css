@@ -1,0 +1,55 @@
+.product-cont{
+    height : 100vh;
+    padding : 10rem;
+}
+
+.product-flex{
+    height : 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 5rem;
+}
+
+.product-cont .left img{
+    height : 40rem;
+    width : 60rem;
+    border-radius: 1rem;
+}
+
+.product-cont .right{
+    color : white;
+    font-family: var(--font1);
+    display: flex;
+    flex-direction: column;
+    gap : 2rem;
+}
+
+.product-cont .right h2{
+    font-size: 4.5rem;
+    color : var(--color2);
+}
+
+.product-cont .right h3{
+    font-size: 2.5rem;
+}
+
+.product-cont label{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap : 1rem;
+}
+
+.product-cont input{
+    font-size: 2rem;
+    background-color: var(--color3);
+    font-family: var(--font1);
+    padding : 1rem;
+    border: none;
+    color : white;
+}
+
+.product-cont input:focus{
+    outline: none;
+}
