@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import Product from './components/Product';
 import Shop from './components/Shop';
+import './styles/General.css';
 
 
 const App = () => {
