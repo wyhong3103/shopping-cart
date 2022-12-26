@@ -11,7 +11,7 @@ const CartItem = ({item}) => {
             <div className="right">
                 <h3 className="cart-game-title">{item.name}</h3>
                 <p>Qty : {item.qty}</p>
-                <p>${Number(item.qty) * Number(item.price)}</p>
+                <p>${(Number(item.qty) * Number(item.price)).toFixed(2)}</p>
             </div>
         </div>
     )
