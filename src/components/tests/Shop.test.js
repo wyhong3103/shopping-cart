@@ -119,12 +119,8 @@ describe("Shop Page Render Test", () => {
                 <BrowserRouter>
                     <Shop key={i} products={[productDetails[i]]}/>
                     <Routes>
-                        <Route
-                            path="/product/:id"
-                            element={
-                                null
-                            }
-                        ></Route>
+                        <Route path="/" element = {null}/>
+                        <Route path="/product/:id" element={null}></Route>
                     </Routes>
                 </BrowserRouter>
             )
