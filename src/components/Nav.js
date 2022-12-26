@@ -4,16 +4,18 @@ import '../styles/Nav.css';
 const Nav = () => {
     return(
         <nav>
-            <h1 className="title">GamingWizard</h1>
+            <Link>
+                <h1 className="title">GamingWizard</h1>
+            </Link>
             <ul>
                 <Link to="/">
-                    <li>Home</li>
+                    <li>/Home</li>
                 </Link>
                 <Link to="/shop">  
-                    <li>Shop</li>
+                    <li>/Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Cart</li>
+                    <li>/Cart</li>
                 </Link>
             </ul>
         </nav>
