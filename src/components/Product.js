@@ -4,7 +4,7 @@ import '../styles/Product.css';
 
 const Product = ({cart, products, inc, dec}) => {
     const {id} = useParams();
-    const notFound = id >= products.length || id <= 0;
+    const notFound = id > products.length || id <= 0;
     const image = (notFound ? null : require(`../assets/${id}.jpg`));
     const item = (
         notFound ?
