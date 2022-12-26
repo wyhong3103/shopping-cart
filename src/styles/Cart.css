@@ -13,10 +13,33 @@
     gap : 1rem;
 }
 
+.checkout-cont{
+    display: flex;
+    width : 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .total{
     font-family: var(--font1);
     font-size: 3rem;
     color: white;
+}
+
+.checkout-btn{
+    font-family: var(--font1);
+    color : black;
+    font-size: 2rem;
+    height : 7rem;
+    width : 20rem;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.checkout-btn:hover{
+    cursor: pointer;
+    background-color: rgb(194, 194, 194);
 }
 
 

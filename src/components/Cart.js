@@ -29,8 +29,11 @@ const Cart = ({cart}) => {
                             )
                         }
                     </div>
-                    <div>
+                    <div className="checkout-cont">
                         <p className="total">Total : ${total.toFixed(2)}</p>
+                        <button className="checkout-btn">
+                            Checkout
+                        </button>
                     </div>
                 </div>
             }
