@@ -8,7 +8,7 @@ const Shop = ({products}) => {
             {
                 products.map((item) => {
                     return(
-                        <Link to={`/product/${item.id}`}>
+                        <Link to={`/shopping-cart/product/${item.id}`}>
                             <ItemCard key={item.id} item={item}/>
                         </Link>
                     )

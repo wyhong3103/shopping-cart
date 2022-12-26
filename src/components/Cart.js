@@ -21,7 +21,7 @@ const Cart = ({cart}) => {
                             cart.map(
                                 (item) => {
                                     return(
-                                        <Link to={`/product/${item.id}`}>
+                                        <Link to={`/shopping-cart/product/${item.id}`}>
                                             <CartItem key={item.id} item={item}/>
                                         </Link>
                                     )

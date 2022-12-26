@@ -157,15 +157,15 @@ const App = () => {
     }
 
     return(
-        <BrowserRouter>
+        <BrowserRouter basename='/'>
             <Nav/>
             <Routes>
                 <Route 
-                    path="/" 
+                    path="/shopping-cart/" 
                     element={<Home/>}
                 />
                 <Route 
-                    path="/cart" 
+                    path="/shopping-cart/cart" 
                     element={
                         <Cart 
                             cart={cart} 
@@ -173,11 +173,11 @@ const App = () => {
                     }
                 />
                 <Route 
-                    path="/shop" 
+                    path="/shopping-cart/shop" 
                     element={<Shop products={productDetails}/>}
                 />
                 <Route 
-                    path="/product/:id" 
+                    path="/shopping-cart/product/:id" 
                     element={
                         <Product 
                             cart={cart} 
