@@ -1,0 +1,31 @@
+.item-card{
+    display: flex;
+    flex-direction: column;
+    gap :  1rem;
+    border-radius: 1rem;
+    padding : 1rem;
+    transition: all 0.3s;
+}
+
+.item-card:hover{
+    background-color: var(--color3);
+}
+
+
+.item-card img{
+    height : 25rem;
+    width : 40rem;
+}
+
+.game-title, .game-price{
+    color : white;
+    font-family: var(--font1);
+}
+
+.game-title{
+    font-size : 2rem;
+}
+
+.game-price{
+    font-size: 1.5rem;
+}
