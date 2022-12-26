@@ -4,7 +4,7 @@ import '../styles/Nav.css';
 const Nav = () => {
     return(
         <nav>
-            <Link>
+            <Link to="/">
                 <h1 className="title">GamingWizard</h1>
             </Link>
             <ul>
