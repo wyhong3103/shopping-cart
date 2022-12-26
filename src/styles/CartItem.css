@@ -1,0 +1,36 @@
+.cart-item{
+    padding : 2rem;
+    display: flex;
+    flex-direction: row;
+    gap : 3rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.cart-item img{
+    height : 15rem;
+    width : 28rem;
+    border-radius: 1rem;
+}
+
+.cart-item .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 1rem;
+    color : white;
+    font-family: var(--font1);
+}
+
+.cart-item .right h3{
+    font-size: 3rem;
+}
+
+.cart-item .right p{
+    font-size: 2rem;
+}
+
+.cart-item:hover{
+    cursor: pointer;
+    background-color: var(--color3);
+}
