@@ -1,5 +1,6 @@
 import ItemCard from './ItemCard';
 import { Link } from 'react-router-dom';
+import '../styles/Shop.css';
 
 const Shop = ({products}) => {
     return(

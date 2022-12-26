@@ -1,3 +1,5 @@
+import '../styles/ItemCard.css';
+
 const ItemCard = ({item}) => {
     
     const image = require(`../assets/${item.id}.jpg`);
