@@ -8,4 +8,4 @@ To practice React Router & React Testing Library. Though I haven't done a lot of
 
 # Live Demo
 
-(Click me!)[https://wyhong3103.github.io/shopping-cart/]
+[Click me!](https://wyhong3103.github.io/shopping-cart/)
