@@ -1,5 +1,6 @@
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
+import Message from "./Message";
 import '../styles/Cart.css';
 
 const Cart = ({cart}) => {
@@ -9,23 +10,30 @@ const Cart = ({cart}) => {
     }
 
     return(
-        <div className="cart-cont">
-            <div className="cart-items">
-                {
-                    cart.map(
-                        (item) => {
-                            return(
-                                <Link to={`/product/${item.id}`}>
-                                    <CartItem key={item.id} item={item}/>
-                                </Link>
+        <div>
+            {
+                cart.length === 0 ? 
+                <Message msg="Cart is empty!"/>
+                :
+                <div className="cart-cont">
+                    <div className="cart-items">
+                        {
+                            cart.map(
+                                (item) => {
+                                    return(
+                                        <Link to={`/product/${item.id}`}>
+                                            <CartItem key={item.id} item={item}/>
+                                        </Link>
+                                    )
+                                }
                             )
                         }
-                    )
-                }
-            </div>
-            <div>
-                <p className="total">Total : ${total.toFixed(2)}</p>
-            </div>
+                    </div>
+                    <div>
+                        <p className="total">Total : ${total.toFixed(2)}</p>
+                    </div>
+                </div>
+            }
         </div>
     )
 }

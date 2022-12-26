@@ -5,7 +5,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import Product from './components/Product';
 import Shop from './components/Shop';
-import NotFound from './components/NotFound';
+import Message from './components/Message';
 import './styles/General.css';
 
 
@@ -189,7 +189,7 @@ const App = () => {
                 />
             <Route 
                 path="*" 
-                element={<NotFound/>}
+                element={<Message msg="Page not found!"/>}
             />
             </Routes>
         </BrowserRouter>

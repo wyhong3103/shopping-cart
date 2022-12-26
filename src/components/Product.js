@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import NotFound from './NotFound';
+import Message from './Message';
 import '../styles/Product.css';
 
 const Product = ({cart, products, inc, dec}) => {
@@ -36,7 +36,7 @@ const Product = ({cart, products, inc, dec}) => {
         <div>
             {
                 notFound ? 
-                <NotFound/> 
+                <Message msg="Page not found!"/> 
                 :
                 <div className="product-cont">
                     <div className="product-flex">
