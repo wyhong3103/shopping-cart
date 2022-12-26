@@ -1,4 +1,6 @@
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
+import '../styles/Cart.css';
 
 const Cart = ({cart}) => {
     let total = 0;
@@ -13,7 +15,9 @@ const Cart = ({cart}) => {
                     cart.map(
                         (item) => {
                             return(
-                                <CartItem key={item.id} item={item}/>
+                                <Link to={`/product/${item.id}`}>
+                                    <CartItem key={item.id} item={item}/>
+                                </Link>
                             )
                         }
                     )

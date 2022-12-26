@@ -1,3 +1,5 @@
+import '../styles/CartItem.css';
+
 const CartItem = ({item}) => {
     const image = require(`../assets/${item.id}.jpg`);
 
@@ -8,7 +10,7 @@ const CartItem = ({item}) => {
             </div>
             <div className="right">
                 <h3 className="cart-game-title">{item.name}</h3>
-                <p>{item.qty}</p>
+                <p>Qty : {item.qty}</p>
                 <p>${Number(item.qty) * Number(item.price)}</p>
             </div>
         </div>
