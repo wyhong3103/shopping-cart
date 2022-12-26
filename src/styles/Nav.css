@@ -1,9 +1,43 @@
 nav{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color : var(--color1);
+    padding : 1rem 3rem 1rem 3rem;
+    width : 100%;
+    backdrop-filter: blur(5px);
+    position:fixed;
 }
 
 nav h1{
     font-family: var(--font1);
+    color : var(--color1);
+    transition: all 0.3s;
 }
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap : 3rem;
+}
+
+nav li{
+    font-family: var(--font1);
+    color : var(--color1);
+    transition: all 0.3s;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav h1:hover, nav li:hover{
+    cursor: pointer;
+    color : white;
+}
+
+
+
 

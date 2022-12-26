@@ -9,4 +9,6 @@
 html{
     font-size: 10px;
     --font1 : 'Overpass', sans-serif;
+    --color1 : #5e9ebc;
+    background-color: black;
 }
